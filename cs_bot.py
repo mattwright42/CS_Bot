@@ -10,3 +10,18 @@ def cs_service_bot():
     else:
         print("Sorry, we didn't understand your selection.")
         cs_service_bot()
+
+
+def existing_customer():
+    print(
+        "What kind of support do you need? \n [1] Television Support \n [2] Internet Support \n [3] Speak to a support representative")
+    respone = input("Please enter the number corresponding to your choice: ")
+    if response == "1":
+        television_support()
+    elif response == "2":
+        internet_support()
+    elif response == "3":
+        live_rep("support")
+    else:
+        print("Sorry, we didn't understand your selection.")
+        existing_customer()
