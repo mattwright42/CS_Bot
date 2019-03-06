@@ -83,3 +83,25 @@ def internet_support():
     else:
         print("Sorry, we didn't understand your selection.")
         internet_support()
+
+
+def did_that_help():
+    print("Did that solve the problem? \n [1] Yes \n [2] No")
+    response = input("Please enter the number corresponding to your choice: ")
+    if response == "1":
+        print("Great! Have a wonderful day.")
+    elif response == "2":
+        print(
+            "We're sorry. Would you like to talk to a live representative or schedule a home visit to address your problem? \n [1] Live Representative \n [2] Home Visit")
+        response_two = input(
+            "Please enter the number corresponsding to your choice: ")
+        if response_two == "1":
+            live_rep("support")
+        elif response_two == "2":
+            home_visit("support")
+        else:
+            print("Sorry, we didn't understand your selection.")
+            did_that_help()
+    else:
+        print("Sorry, we didn't understand your selection.")
+        did_that_help()
