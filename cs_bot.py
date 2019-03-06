@@ -105,3 +105,54 @@ def did_that_help():
     else:
         print("Sorry, we didn't understand your selection.")
         did_that_help()
+
+
+def sign_up():
+    print("Great choice, friend! We're excited to have you join the DNS family: Please select the package you are interested in signing up for.")
+    response = input("Please enter the number corresponding to your choice: ")
+    if response == "1":
+        print("You've selected the Bundle Package! Please schedule a home visit and our technician will come and set up your new service.")
+        home_visit("new_install")
+    elif response == "2":
+        print("You've selected the Internet Only Package! Please schedule a home visit and our technician will come and set up your new service.")
+        home_visit("new_install")
+    elif response == "3":
+        print("You've selected the Cable Only Package! Please schedule a home visit and our technician will come and set up your new service.")
+        home_visit("new_install")
+    else:
+        print("Sorry, we didn't understand your selection.")
+
+
+def home_visit(purpose="none"):
+    if purpose == "none":
+        print(
+            "What is the purpose of your home visit? \n [1] New service installation. \n [2] Existing service repair. \n [3] Location scouting for unserviced regions.")
+        response = input(
+            "Please enter the number corresponding to your choice: ")
+        if response == "1":
+            home_visit("new_install")
+        elif response == "2":
+            home_visit("support")
+        elif response == "3":
+            home_visit("scout")
+        else:
+            print("Sorry, we didn't understand your selection.")
+            home_visit()
+    if purpose == "new_install":
+        print("Please enter a date below when you are available for a technician to to come to your home and install your new service.")
+        visit_date = input("Date:")
+        print("Wonderful! A technician will come visit you on " + visit_date +
+              ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
+    if purpose == "support":
+        print("Please enter a date below when you are available for a technician to come to your home and insepct the problem:")
+        visit_date = input("Date:")
+        print("Wonderful! A technician will come visit you on " + visit_date +
+              ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
+    if purpose == "scout":
+        print("Please enter a date below when you are available for a technician to come scout your region for expansion:")
+        visit_date = input("Date:")
+        print("Wonderful! A technician will come visit you on " + visit_date +
+              ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
