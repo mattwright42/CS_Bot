@@ -163,3 +163,6 @@ def live_rep(purpose):
         print("Please hold while we connect you with a live sales representative. The wait time will be between two minutes and six hours. We thank you for your patience.")
     if purpose == "support":
         print("Please hold while we connect you with a live sales representative. The wait time will be between two minutes and six hours. We thank you for your patience.")
+
+
+cs_service_bot()
